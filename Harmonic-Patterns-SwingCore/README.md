@@ -1,6 +1,6 @@
 ![Harmonic Patterns SwingCore Pro](Harmonic-Patterns-SwingCore-Pro.png)
 
-# Harmonic Patterns SwingCore
+# Harmonic Patterns SwingCore - Para Meta Trader 5 (MT5)
 
 Indicador de análisis técnico para la detección y visualización de patrones armónicos sobre el gráfico, con proyección de niveles de Fibonacci y sistema de alertas configurable.
 
