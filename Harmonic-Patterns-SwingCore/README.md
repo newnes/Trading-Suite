@@ -6,26 +6,6 @@ Indicador de análisis técnico para la detección y visualización de patrones 
 
 ---
 
-## Contenido
-
-- [Qué es este indicador](#qué-es-este-indicador)
-- [Qué NO es este indicador](#qué-no-es-este-indicador)
-- [El problema real](#el-problema-real-detectarla-estructura-no-medir-el-patrón)
-- [El enfoque de este indicador](#el-enfoque-de-este-indicador)
-- [Breve contexto histórico](#breve-contexto-histórico)
-- [Estructura de patrones](#estructura-de-patrones)
-- [Tabla de patrones y ratios](#tabla-de-patrones-y-ratios)
-- [Método de validación geométrica](#método-de-validación-geométrica-solo-pro)
-- [Características](#características)
-- [Características técnicas](#características-técnicas)
-- [Versiones](#versiones)
-- [Parámetros principales](#parámetros-principales)
-- [Sistema de alertas](#sistema-de-alertas-5-canales)
-- [Aviso de responsabilidad](#aviso-de-responsabilidad)
-- [Contacto](#contacto)
-
----
-
 ## Qué es este indicador
 
 Es una **herramienta de análisis visual**. Su función es identificar en el gráfico estructuras que cumplen las relaciones geométricas de seis patrones armónicos clásicos —Gartley, Bat, Butterfly, Crab, Cypher y Shark— en sus variantes alcista y bajista, y representarlas de forma clara junto con sus niveles de proyección.
@@ -83,8 +63,82 @@ Lo que ha cambiado en los últimos años es el intento de automatizar esta lectu
 
 ---
 
-## Estructura de patrones
+## Versiones: Lite y Pro.
 
-Todos los patrones se identifican sobre una secuencia de cinco puntos de giro, alternando picos y valles.
+### LITE (gratuita)
+- 1 patrón a la vez entre Gartley, Bat, Butterfly, Crab, Cypher y Shark.
+- Disponible solo Método Clásico | (Método Geométrico Bloqueado).
+- Pattern and ZigZag Visualization
+- Percentage Labels on Chart
+- Fibonacci Targets Direct and Inverse:(38.2/50.0/61.8/100.0/161.8/261.8/361.8%)
+-  Basic Alerts (Visual + Sound)
+- Análisis multi-timeframe.
+  
+### PRO (de pago)
+- **6 patrones simultáneamente: Gartley, Bat, Butterfly, Crab, Cypher y Shark.**
+- **Motor Clásico** 
+- **Motor Geométrico**
+-  Pattern and ZigZag Visualization
+- Percentage Labels on Chart
+- Fibonacci Targets Direct and Inverse:(38.2/50.0/61.8/100.0/161.8/261.8/361.8%)
+-  Basic Alerts (Visual + Sound)
+- Análisis multi-timeframe.
+---
 
-**Patrón alcista** (X = valle):
+## Parámetros principales
+
+### Generales
+- Activación de la detección y método de validación.
+- Tolerancia de ratios (0.15 por defecto).
+- Ventana de escaneo (1440 barras).
+
+### Estructura
+- Prominencia mínima (2.0).
+
+### Visualización
+- Mostrar/ocultar porcentajes.
+- Líneas horizontales desde D.
+- Niveles de Fibonacci.
+
+### Alertas
+- Activación.
+- Número de repeticiones (5 por defecto).
+
+---
+
+## Sistema de alertas (5 canales)
+
+| Canal | Descripción | Configuración |
+|---|---|---|
+| **1. Visual** | Pop-up en el terminal MT5 | `Alert_Visual = true` |
+| **2. Sonido** | Reproducción de archivo WAV | `Alert_Sonido = true` |
+| **3. Log** | Registro en la pestaña Expertos | `Alert_Log = true` |
+
+---
+
+
+## Aviso de responsabilidad
+
+Este indicador se ofrece **exclusivamente con fines informativos y demostrativos**, como herramienta de apoyo al análisis técnico.
+
+No constituye asesoría financiera, de inversión ni recomendación de operación alguna. La detección de patrones es el resultado de un cálculo geométrico y no representa una predicción del comportamiento futuro del mercado.
+
+El rendimiento pasado no garantiza resultados futuros. La operación en mercados financieros conlleva un riesgo elevado de pérdida.
+
+**Usted asume la totalidad del riesgo derivado de cualquier decisión que tome con base en este indicador.** El autor no se hace responsable de pérdidas, daños o perjuicios de ningún tipo resultantes de su uso.
+
+---
+
+## Contacto
+
+| Contacto | Detalle |
+|----------|---------|
+| **Autor** | Nestor Mendez |
+| **Email** | nestor.boza@gmail.com |
+| **GitHub** | https://github.com/newnes |
+
+---
+
+*Versión: 1.0 | Última actualización: Agosto 2026 | Copyright © 2026, Nestor Mendez*
+
+
