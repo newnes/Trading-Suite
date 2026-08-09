@@ -99,3 +99,76 @@ It does not constitute financial or investment advice, nor any trading recommend
 Past performance does not guarantee future results. Trading financial markets carries a high risk of loss.
 
 **You assume the entire risk of any decision you make based on this indicator.** The author is not responsible for any losses, damages, or harm of any kind resulting from its use.
+
+
+## What This Indicator Is
+
+It is a **visual analysis tool**. Its job is to identify structures on the chart that satisfy the geometric relationships of six classic harmonic patterns — **Gartley, Bat, Butterfly, Crab, Cypher, and Shark** — in both bullish and bearish variants, and to display them clearly along with their projection levels.
+
+The indicator draws the pattern legs, labels the completion point, projects Fibonacci retracement and extension levels from the most recent pattern, and can raise a terminal alert when a new one is detected.
+
+---
+
+## What This Indicator Is NOT
+
+- **Not an automated trading system.** Does not open, close, or manage positions.
+- **Not a buy/sell signal generator.** Displays geometric structures; interpretation and any decision rest entirely with the user.
+- **Not a price predictor.** Fibonacci levels are geometric projection references, not forecasts.
+- **Not a guarantee of any particular outcome.** A harmonic pattern is a technical-analysis figure, and its appearance does not imply a result.
+
+---
+
+## The Real Problem: Detecting Structure, Not Measuring Patterns
+
+It is worth being transparent about where the real technical difficulty of this kind of indicator lies.
+
+Measuring a harmonic pattern — checking whether the proportions between its legs are close to the Fibonacci ratios — is, at bottom, straightforward arithmetic. That is **not** the hard part.
+
+The hard part, and where most detectors fail, is the step before it: **identifying what is a genuinely relevant peak and valley in real time**, especially on low timeframes such as M1, where price noise is considerable.
+
+Here there is no single, objective answer. Detecting significant highs and lows depends on several parameters (sensitivity, observation window, minimum prominence, separation between extremes) and can be approached with different mathematical models, each with its own trade-offs:
+
+- If the detector is **too sensitive**, it marks noise as if it were real turning points and produces spurious patterns.
+- If it is **too coarse**, it misses valid structures.
+
+The central question — *how much smoothing is enough and how much is too much* — has no universally correct solution. It is an inherently subjective problem, and any honest detector is really a position taken on that balance.
+
+---
+
+## The Approach Behind This Indicator
+
+This indicator addresses that difficulty with an **empirical and alternative** method of identifying price structure: empirical because its configuration is derived from observation on real data, and alternative because it is one of several possible paths to solve a problem that, as explained, admits no single solution.
+
+Building it required integrating several disciplines:
+
+- **Signal processing**, to treat the price series before searching for extremes and reduce the impact of noise (Savitzky-Golay 7/3).
+- **Analytic geometry**, since each pattern is a set of spatial relationships between five points.
+- **Proportions and metric relationships** (the Fibonacci ratios) as the validation criterion between legs.
+- **Combinatorial validation logic**: strict peak-valley alternation, and verification of the geometric inequalities specific to each pattern.
+
+The result is a pipeline that first resolves the swing structure and only then applies pattern measurement on that already-refined structure.
+
+---
+
+## Brief Historical Context
+
+Harmonic patterns have a long tradition in technical analysis. Their origin is usually traced to the work of H. M. Gartley (1935), and they were later formalized with Fibonacci proportions by subsequent authors, among them Scott Carney, who systematized several of the patterns now considered standard (such as the Bat, Crab, and Shark). The technique, therefore, has decades of history.
+
+What has changed in recent years is the attempt to automate this reading on low timeframes, where — as described above — reliable detection of price structure becomes the true bottleneck.
+
+---
+
+## Pattern Reference Table
+
+| Pattern | AB/XA | XD/XA | Characteristic |
+|---------|-------|-------|----------------|
+| **GARTLEY** | 61.8% | 78.6% | Classic, moderate retracement |
+| **BAT** | 38.2-50% | 88.6% | Deep retracement at D |
+| **BUTTERFLY** | 78.6% | 127.2-161.8% | Extreme extension |
+| **CRAB** | 38.2-61.8% | 161.8% | Maximum extension |
+| **CYPHER** | BC/XA: 1.13-1.414 | CD/XC: 78.6% | C > A (C surpasses A) |
+| **SHARK** | XD/XA: 88.6% | CD/BC: 1.13-1.618 | D <= X (Bull) / D >= X (Bear) |
+
+**Note:** The **Shark** pattern uses **X-A-B-C-D** notation instead of O-X-A-B-C, as used in other implementations.
+
+---
