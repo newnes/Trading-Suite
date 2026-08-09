@@ -67,7 +67,7 @@ Lo que ha cambiado en los últimos años es el intento de automatizar esta lectu
 
 ### LITE (gratuita)
 - 1 patrón a la vez entre Gartley, Bat, Butterfly, Crab, Cypher y Shark.
-- Disponible solo Método Clásico | (Método Geométrico Bloqueado).
+- Disponible solo Método Clásico 
 - Pattern and ZigZag Visualization
 - Percentage Labels on Chart
 - Fibonacci Targets Direct and Inverse:(38.2/50.0/61.8/100.0/161.8/261.8/361.8%)
