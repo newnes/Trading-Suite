@@ -1,9 +1,6 @@
 ## Harmonic Patterns SwingCore
 
-![Harmonic Patterns SwingCore Pro](Harmonic-Patterns-SwingCore/Harmonic-Patterns-SwingCore-Pro.png)
-
-Harmonic pattern detector for MetaTrader 5 — detects 6 patterns with Fibonacci target projection and alerts.
-[See details →](Harmonic-Patterns-SwingCore/)
+![Harmonic Patterns SwingCore Pro](Harmonic-Patterns-SwingCore-Pro.png)
 
 # Harmonic Patterns SwingCore — Harmonic pattern detector for MetaTrader 5
 
