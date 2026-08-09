@@ -82,6 +82,38 @@ Lo que ha cambiado en los últimos años es el intento de automatizar esta lectu
 - Fibonacci Targets Direct and Inverse:(38.2/50.0/61.8/100.0/161.8/261.8/361.8%)
 -  Basic Alerts (Visual + Sound)
 ---
+### Comparativa: Clásico vs Geométrico
+
+| Aspecto | Método Clásico | Método Geométrico |
+|---------|---------------|-------------------|
+| **Base** | Ratios Fibonacci | Relaciones de orden |
+| **Validación** | Proporciones numéricas | Condiciones de orden |
+| **Tolerancia** | Parámetro ajustable | Condiciones geométricas |
+| **Disponibilidad** | LITE y PRO | **SOLO PRO** |
+
+---
+
+## Características
+
+- Detección de 6 patrones armónicos (Gartley, Bat, Butterfly, Crab, Cypher, Shark), alcistas y bajistas.
+- Trazado de los segmentos del patrón y etiqueta en el punto de finalización.
+- Proyección de niveles de Fibonacci (retrocesos y extensiones) del patrón más reciente.
+- **Dos métodos de validación seleccionables:**
+  - **Clásico:** basado en ratios de Fibonacci (**disponible en LITE y PRO**)
+  - **Geométrico:** basado en estructura de precios (**SOLO PRO**)
+- Sistema de alertas configurable, con número de repeticiones ajustable.
+- Visualización de la estructura de swings sobre el gráfico.
+
+---
+
+## Características técnicas
+
+- **Base de datos:** velas Heiken Ashi (suavizado de precio).
+- **Detección de estructura:** prominencia mínima + distancia mínima entre extremos + alternancia forzada de picos y valles.
+- **Validación:** ratios clásicos o reglas geométricas, según el método seleccionado.
+- **Sistema de identificación:** firma basada en tiempo (datetime) que evita el repintado del patrón detectado.
+- **Alertas:** Sistema de alertas configurables, con control de repeticiones.
+- **Proyección Fibonacci:** hasta 7 niveles, en ambas direcciones (retroceso y extensión).
 
 ## Parámetros principales
 
