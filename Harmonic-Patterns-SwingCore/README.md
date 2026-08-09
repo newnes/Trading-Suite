@@ -67,7 +67,7 @@ Lo que ha cambiado en los últimos años es el intento de automatizar esta lectu
 
 ### LITE (gratuita)
 - 1 patrón a la vez entre Gartley, Bat, Butterfly, Crab, Cypher y Shark.
-- Disponible solo Método de escaneo Clásico 
+- Disponible solo Método de detección Clásico 
 - Pattern and ZigZag Visualization
 - Percentage Labels on Chart
 - Fibonacci Targets Direct and Inverse:(38.2/50.0/61.8/100.0/161.8/261.8/361.8%)
@@ -75,8 +75,8 @@ Lo que ha cambiado en los últimos años es el intento de automatizar esta lectu
   
 ### PRO (de pago)
 - **6 patrones simultáneamente: Gartley, Bat, Butterfly, Crab, Cypher y Shark.**
-- **Método de escaneo Clásico** 
-- **Método de escaneo Geométrico**
+- **Método de detección Clásico** 
+- **Método de detección Geométrico**
 -  Pattern and ZigZag Visualization
 - Percentage Labels on Chart
 - Fibonacci Targets Direct and Inverse:(38.2/50.0/61.8/100.0/161.8/261.8/361.8%)
