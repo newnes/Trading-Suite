@@ -91,13 +91,9 @@ Todos los patrones se identifican sobre una secuencia de cinco puntos de giro, a
 X → A → B → C → D
 V P V P V
 
-
-
 **Patrón bajista** (X = pico):
 X → A → B → C → D
 P V P V P
-
-
 
 Donde **P** = pico y **V** = valle.
 
@@ -144,8 +140,6 @@ D < C (D es más bajo que C)
 D ≤ B (D es igual o más bajo que B)
 
 D > X (D es más alto que X)
-
-text
 
 Si alguna condición falla, el patrón **no se valida**, incluso si los ratios de Fibonacci coinciden.
 
