@@ -122,15 +122,6 @@ Además del método clásico basado en ratios de Fibonacci, la versión PRO incl
 
 En lugar de basarse únicamente en proporciones numéricas, el método geométrico valida que los puntos X-A-B-C-D cumplan **relaciones de orden estrictas** entre sí. Esto significa que no solo se verifican los ratios, sino también la **estructura espacial** del patrón.
 
-### Ventajas del método geométrico
-
-| Ventaja | Descripción |
-|---------|-------------|
-| **Mayor precisión** | Verifica la estructura real del precio, no solo ratios |
-| **Menos falsos positivos** | Filtra patrones que cumplen ratios pero tienen estructura incorrecta |
-| **Más robusto** | Menos sensible a la tolerancia de ratios |
-| **Detección más temprana** | Puede identificar patrones en formación |
-
 ### Comparativa: Clásico vs Geométrico
 
 | Aspecto | Método Clásico | Método Geométrico |
