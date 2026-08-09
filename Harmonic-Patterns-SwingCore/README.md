@@ -99,9 +99,26 @@ Donde **P** = pico y **V** = valle.
 - Detección de 6 patrones armónicos (Gartley, Bat, Butterfly, Crab, Cypher, Shark), alcistas y bajistas.
 - Trazado de los segmentos del patrón y etiqueta en el punto de finalización.
 - Proyección de niveles de Fibonacci (retrocesos y extensiones) del patrón más reciente.
-- Dos métodos de validación seleccionables: por ratios clásicos o por reglas geométricas.
+- **Dos métodos de validación seleccionables:**
+  - **Clásico:** basado en ratios de Fibonacci (**disponible en LITE y PRO**)
+  - **Geométrico:** basado en estructura de precios (**SOLO PRO**)
 - Sistema de alertas configurable, con número de repeticiones ajustable.
 - Visualización de la estructura de swings sobre el gráfico.
+
+### Comparativa LITE vs PRO
+
+| Característica | LITE | PRO |
+|----------------|------|-----|
+| Patrones simultáneos | 1 a la vez | **6 simultáneos** |
+| Método clásico (ratios) | ✅ | ✅ |
+| **Método geométrico** | ❌ | **✅** |
+| Validación por estructura | ❌ | **✅** |
+| Alertas (canales) | 2 | **5** |
+| Multi-timeframe | ❌ | **✅** |
+| Historial de patrones | ❌ | **✅** |
+| Exportación CSV | ❌ | **✅** |
+| Soporte premium | ❌ | **✅** |
+| Precio | **GRATIS** | **$97** |
 
 ## Características técnicas
 
