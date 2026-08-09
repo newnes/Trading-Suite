@@ -140,7 +140,6 @@ En lugar de basarse únicamente en proporciones numéricas, el método geométri
 ## Características técnicas
 
 - **Base de datos:** velas Heiken Ashi (suavizado de precio).
-- **Filtro:** Savitzky-Golay 7/3 para el procesamiento de la señal antes de buscar extremos.
 - **Detección de estructura:** prominencia mínima + distancia mínima entre extremos + alternancia forzada de picos y valles.
 - **Validación:** ratios clásicos o reglas geométricas, según el método seleccionado.
 - **Sistema de identificación:** firma basada en tiempo (datetime) que evita el repintado del patrón detectado.
