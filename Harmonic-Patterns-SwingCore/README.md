@@ -122,27 +122,6 @@ Además del método clásico basado en ratios de Fibonacci, la versión PRO incl
 
 En lugar de basarse únicamente en proporciones numéricas, el método geométrico valida que los puntos X-A-B-C-D cumplan **relaciones de orden estrictas** entre sí. Esto significa que no solo se verifican los ratios, sino también la **estructura espacial** del patrón.
 
-### Ejemplo: Gartley Alcista
-Condiciones geométricas:
-
-X < A (X es valle, A es pico)
-
-A > B (A es más alto que B)
-
-B > X (B es más alto que X)
-
-C > B (C es más alto que B)
-
-C < A (C es más bajo que A)
-
-D < C (D es más bajo que C)
-
-D ≤ B (D es igual o más bajo que B)
-
-D > X (D es más alto que X)
-
-Si alguna condición falla, el patrón **no se valida**, incluso si los ratios de Fibonacci coinciden.
-
 ### Ventajas del método geométrico
 
 | Ventaja | Descripción |
