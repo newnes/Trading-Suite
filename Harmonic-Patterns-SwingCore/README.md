@@ -72,7 +72,6 @@ Lo que ha cambiado en los últimos años es el intento de automatizar esta lectu
 - Percentage Labels on Chart
 - Fibonacci Targets Direct and Inverse:(38.2/50.0/61.8/100.0/161.8/261.8/361.8%)
 -  Basic Alerts (Visual + Sound)
-- Análisis multi-timeframe.
   
 ### PRO (de pago)
 - **6 patrones simultáneamente: Gartley, Bat, Butterfly, Crab, Cypher y Shark.**
@@ -82,7 +81,6 @@ Lo que ha cambiado en los últimos años es el intento de automatizar esta lectu
 - Percentage Labels on Chart
 - Fibonacci Targets Direct and Inverse:(38.2/50.0/61.8/100.0/161.8/261.8/361.8%)
 -  Basic Alerts (Visual + Sound)
-- Análisis multi-timeframe.
 ---
 
 ## Parámetros principales
