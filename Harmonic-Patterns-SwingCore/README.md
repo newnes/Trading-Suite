@@ -94,8 +94,12 @@ What has changed in recent years is the attempt to automate this reading on low 
 | **Availability** | LITE and PRO | **PRO ONLY** |
 
 ---
-
-## Features
+![Harmonic Patterns SwingCore Pro](Harmonic-Patterns-SwingCore-Pro.png)
+## CLASSIC
+---
+![Harmonic Patterns SwingCore Pro](Harmonic-Patterns-SwingCore-Pro.png)
+## GEOMETRIC
+---
 
 - Detection of 6 harmonic patterns (Gartley, Bat, Butterfly, Crab, Cypher, Shark), bullish and bearish.
 - Drawing of pattern legs and label at the completion point.
