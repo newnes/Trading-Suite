@@ -2,7 +2,7 @@
 
 # Harmonic Patterns SwingCore - For MetaTrader 5 (MT5)
 
-Technical analysis indicator for detecting and visualizing harmonic patterns on the chart, with Fibonacci level projection and configurable alert system.
+Technical analysis indicator for detecting and visualizing harmonic patterns on the chart timeframe M1, with Fibonacci level projection and configurable alert system.
 
 ---
 
