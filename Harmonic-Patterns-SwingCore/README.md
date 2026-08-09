@@ -161,9 +161,7 @@ En lugar de basarse únicamente en proporciones numéricas, el método geométri
 - **Motor geométrico** (validación por estructura de precio).
 - **Alertas multicanal** (5 canales: visual, sonido, push, email, log).
 - Análisis multi-timeframe.
-- Historial de patrones detectados.
-- Exportación a CSV.
-- Soporte premium.
+
 
 ### Comparativa LITE vs PRO
 
