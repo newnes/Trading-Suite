@@ -154,8 +154,11 @@ What has changed in recent years is the attempt to automate this reading on low 
 | **3. Log** | Registration in Experts tab | `Alert_Log = true` |
 
 ---
-## DOWNLOAD THE MANUAL TO INTALLATIONS AND USE IT.
+## Download the Manual for Installation and Usage
 
+For detailed instructions on how to install and use Harmonic Patterns SwingCore, please download the complete user manual:
+
+📥 **[Download Manual_SwingCore_EN.pdf](Manual_SwingCore_EN.pdf)**
 
 
 ## Disclaimer
