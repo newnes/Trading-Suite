@@ -154,6 +154,9 @@ What has changed in recent years is the attempt to automate this reading on low 
 | **3. Log** | Registration in Experts tab | `Alert_Log = true` |
 
 ---
+## DOWNLOAD THE MANUAL TO INTALLATIONS AND USE IT.
+
+
 
 ## Disclaimer
 
