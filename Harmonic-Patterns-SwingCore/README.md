@@ -1,4 +1,4 @@
-![Harmonic Patterns SwingCore Pro](Harmonic-Patterns-SwingCore/Harmonic-Patterns-SwingCore-Pro.png)
+![Harmonic Patterns SwingCore Pro](Harmonic-Patterns-SwingCore/Harmonic-Patterns-SwingCore-Pro)
 
 # Harmonic Patterns SwingCore — Harmonic pattern detector for MetaTrader 5
 
