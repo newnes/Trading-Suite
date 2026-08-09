@@ -1,136 +1,176 @@
-# Harmonic Patterns SwingCore — Harmonic Pattern Detector for MetaTrader 5
+# Harmonicos Ultra — Detector de patrones armónicos para MetaTrader 5
 
-A technical-analysis tool for detecting and visualizing harmonic patterns on the chart, with Fibonacci level projection and a configurable alert system.
-
----
-
-## Table of Contents
-
-- [What This Indicator Is](#-what-this-indicator-is)
-- [What This Indicator Is NOT](#-what-this-indicator-is-not)
-- [The Real Problem](#-the-real-problem)
-- [The Approach Behind This Indicator](#-the-approach-behind-this-indicator)
-- [Brief Historical Context](#-brief-historical-context)
-- [Pattern Reference Table](#-pattern-reference-table)
-- [Pattern Structure](#-pattern-structure)
-- [Features](#-features)
-- [Technical Features](#-technical-features)
-- [Alert System](#-alert-system-5-channels)
-- [Main Parameters](#-main-parameters)
-- [Installation](#-installation)
-- [Versions](#-versions)
-- [Disclaimer](#-disclaimer)
-- [Contact](#-contact)
+Indicador de análisis técnico para la detección y visualización de patrones armónicos sobre el gráfico, con proyección de niveles de Fibonacci y sistema de alertas configurable.
 
 ---
 
-## What This Indicator Is
+## Qué es este indicador
 
-It is a **visual analysis tool**. Its job is to identify structures on the chart that satisfy the geometric relationships of six classic harmonic patterns — **Gartley, Bat, Butterfly, Crab, Cypher, and Shark** — in both bullish and bearish variants, and to display them clearly along with their projection levels.
+Es una **herramienta de análisis visual**. Su función es identificar en el gráfico estructuras que cumplen las relaciones geométricas de seis patrones armónicos clásicos —Gartley, Bat, Butterfly, Crab, Cypher y Shark— en sus variantes alcista y bajista, y representarlas de forma clara junto con sus niveles de proyección.
 
-The indicator draws the pattern legs, labels the completion point, projects Fibonacci retracement and extension levels from the most recent pattern, and can raise a terminal alert when a new one is detected.
+El indicador dibuja los segmentos del patrón, etiqueta el punto de finalización, proyecta niveles de retroceso y extensión de Fibonacci a partir del patrón más reciente, y puede emitir una alerta cuando se detecta uno nuevo.
 
----
+## Qué NO es este indicador
 
-## What This Indicator Is NOT
-
-| **NOT** | Explanation |
-|---------|-------------|
-| ❌ **Automated Trading System** | Does not open, close, or manage positions |
-| ❌ **Buy/Sell Signal Generator** | Displays geometric structures; interpretation and decisions rest entirely with the user |
-| ❌ **Price Predictor** | Fibonacci levels are geometric projection references, not forecasts |
-| ❌ **Guaranteed Outcome** | A harmonic pattern is a technical-analysis figure; its appearance does not imply a particular resolution |
-
-> **⚠️ Important:** This indicator is a **support tool**, not a decision-making system. The user retains full responsibility for all trading decisions.
+- **No es un sistema de trading automático.** No abre, cierra ni gestiona operaciones.
+- **No genera señales de compra o venta.** Muestra estructuras geométricas; la interpretación y cualquier decisión corresponden por completo al usuario.
+- **No predice el precio.** Los niveles de Fibonacci son referencias de proyección geométrica, no pronósticos.
+- **No garantiza que un patrón detectado se resuelva de ninguna manera concreta.** Un patrón armónico es una figura de análisis técnico, y su aparición no implica un resultado.
 
 ---
 
-## The Real Problem
+## El problema real: detectar la estructura, no medir el patrón
 
-It is worth being transparent about where the real technical difficulty of this kind of indicator lies.
+Conviene ser transparente sobre dónde reside la dificultad técnica de este tipo de indicadores.
 
-### The Easy Part: Measuring the Pattern
+Medir un patrón armónico —comprobar si las proporciones entre sus segmentos se acercan a los ratios de Fibonacci— es, en el fondo, aritmética directa. Esa **no** es la parte difícil.
 
-Measuring a harmonic pattern — checking whether the proportions between its legs are close to the Fibonacci ratios — is, at bottom, **straightforward arithmetic**. That is **not** the hard part.
+La parte difícil, y donde la mayoría de los detectores fallan, es el paso previo: **identificar qué es un pico y qué es un valle verdaderamente relevante en tiempo real**, especialmente en marcos temporales bajos como M1, donde el ruido de precio es considerable.
 
-### The Hard Part: Identifying Relevant Peaks and Valleys
+Aquí no existe una respuesta única y objetiva. La detección de máximos y mínimos significativos depende de varios parámetros (sensibilidad, ventana de observación, prominencia mínima, separación entre extremos) y puede abordarse con distintos modelos matemáticos, cada uno con sus propias concesiones:
 
-The hard part, and where most detectors fail, is the step before it: **identifying what is a genuinely relevant peak and valley in real time**, especially on low timeframes such as M1, where price noise is considerable.
+- Si el detector es **demasiado sensible**, marca ruido como si fueran giros reales y produce patrones espurios.
+- Si es **demasiado grueso**, pasa por alto estructuras válidas.
 
-> **Here there is no single, objective answer.**
+La pregunta central —*cuánto suavizado es suficiente y cuánto es demasiado*— no tiene una solución universalmente correcta. Es un problema intrínsecamente subjetivo, y cualquier detector honesto es, en realidad, una toma de posición sobre ese equilibrio.
 
-Detecting significant highs and lows depends on several parameters:
+## El enfoque de este indicador
 
-| Parameter | Impact |
-|-----------|--------|
-| **Sensitivity** | How easily a point is considered a turning point |
-| **Observation Window** | How many bars are analyzed |
-| **Minimum Prominence** | How significant a move must be |
-| **Separation Between Extremes** | Minimum distance between consecutive highs/lows |
+Este indicador aborda esa dificultad con un método **empírico y alternativo** de identificación de la estructura de precio: empírico porque su configuración se deriva de la observación sobre datos reales, y alternativo porque es uno de los varios caminos posibles para resolver un problema que, como se explicó, no admite una única solución.
 
-### The Trade-off:
+Construirlo implicó integrar varias disciplinas:
 
-| If the detector is... | Problem |
-|----------------------|---------|
-| **Too sensitive** | Marks noise as real turning points → produces **spurious patterns** |
-| **Too coarse** | Misses valid structures → **false negatives** |
+- **Procesamiento de señal**, para tratar la serie de precio antes de buscar extremos y reducir el impacto del ruido.
+- **Geometría analítica**, ya que cada patrón es un conjunto de relaciones espaciales entre cinco puntos.
+- **Proporciones y relaciones métricas** (los ratios de Fibonacci) como criterio de validación entre segmentos.
+- **Lógica de validación combinatoria**: alternancia estricta de picos y valles, y comprobación de las desigualdades geométricas propias de cada patrón.
 
-> **The central question** — *how much smoothing is enough and how much is too much* — has no universally correct solution. It is an inherently **subjective problem**, and any honest detector is really a position taken on that balance.
+El resultado es un pipeline que primero resuelve la estructura de swings y solo después aplica la medición de patrones sobre esa estructura ya depurada.
 
 ---
 
-## The Approach Behind This Indicator
+## Breve contexto histórico
 
-This indicator addresses that difficulty with an **empirical and alternative** method of identifying price structure:
+Los patrones armónicos tienen una larga tradición en el análisis técnico. Su origen suele situarse en el trabajo de H. M. Gartley (1935), y fueron formalizados con proporciones de Fibonacci por autores posteriores, entre ellos Scott Carney, quien sistematizó varios de los patrones que hoy se consideran estándar (como Bat, Crab y Shark). La técnica, por tanto, tiene décadas de recorrido.
 
-| Aspect | Description |
-|--------|-------------|
-| **Empirical** | Configuration derived from observation on real data |
-| **Alternative** | One of several possible paths to solve a problem that admits no single solution |
-
-### Disciplines Integrated:
-
-| Discipline | Application |
-|------------|-------------|
-| **Signal Processing** | Treating the price series before searching for extremes to reduce noise impact (Savitzky-Golay 7/3) |
-| **Analytic Geometry** | Each pattern is a set of spatial relationships between five points |
-| **Metric Relationships** | Fibonacci ratios as validation criteria between legs |
-| **Combinatorial Logic** | Strict peak-valley alternation and pattern-specific geometric inequalities |
-
-> **Result:** A pipeline that first resolves the swing structure and only then applies pattern measurement on that already-refined structure.
+Lo que ha cambiado en los últimos años es el intento de automatizar esta lectura en marcos temporales bajos, donde —como se ha descrito— la detección fiable de la estructura de precio se convierte en el verdadero cuello de botella.
 
 ---
 
-## Brief Historical Context
+## Estructura de patrones
 
-Harmonic patterns have a long tradition in technical analysis:
+Todos los patrones se identifican sobre una secuencia de cinco puntos de giro, alternando picos y valles.
 
-| Era | Development |
-|-----|-------------|
-| **1935** | H. M. Gartley publishes his work describing the original figure |
-| **Late 20th Century** | Fibonacci proportions formalized by subsequent authors |
-| **Early 21st Century** | Scott Carney systematizes patterns (Bat, Crab, Shark) |
-| **Present** | Automation attempts on low timeframes |
+**Patrón alcista** (X = valle):
 
-> **The technique has decades of history.** What has changed recently is the attempt to automate this reading on low timeframes, where reliable detection of price structure becomes the true bottleneck.
+```
+X → A → B → C → D
+V   P   V   P   V
+```
+
+**Patrón bajista** (X = pico):
+
+```
+X → A → B → C → D
+P   V   P   V   P
+```
+
+Donde **P** = pico y **V** = valle.
+
+> **Nota sobre Shark:** este patrón utiliza la notación **X‑A‑B‑C‑D**, a diferencia de la notación **O‑X‑A‑B‑C** empleada en otras implementaciones de referencia. Tenlo en cuenta al comparar la lectura de Shark con la de otros patrones o con otras herramientas.
+
+## Tabla de patrones y ratios
+
+| Patrón | AB/XA | XD/XA | Característica |
+|---|---|---|---|
+| **Gartley** | 61.8% | 78.6% | Clásico, retroceso moderado |
+| **Bat** | 38.2–50% | 88.6% | Retroceso profundo en D |
+| **Butterfly** | 78.6% | 127.2–161.8% | Extensión extrema |
+| **Crab** | 38.2–61.8% | 161.8% | Extensión máxima |
+| **Cypher** | BC/XA: 1.13–1.414 | CD/XC: 78.6% | C rebasa a A |
+| **Shark** | XD/XA: 88.6% | CD/BC: 1.13–1.618 | D ≤ X (alcista) / D ≥ X (bajista) |
 
 ---
 
-## Pattern Reference Table
+## Características
 
-| Pattern | AB/XA | XD/XA | Characteristic |
-|---------|-------|-------|----------------|
-| **GARTLEY** | 61.8% | 78.6% | Classic, moderate retracement |
-| **BAT** | 38.2-50% | 88.6% | Deep retracement at D |
-| **BUTTERFLY** | 78.6% | 127.2-161.8% | Extreme extension |
-| **CRAB** | 38.2-61.8% | 161.8% | Maximum extension |
-| **CYPHER** | BC/XA: 1.13-1.414 | CD/XC: 78.6% | C > A (C surpasses A) |
-| **SHARK** | XD/XA: 88.6% | CD/BC: 1.13-1.618 | D <= X (Bull) / D >= X (Bear) |
+- Detección de 6 patrones armónicos (Gartley, Bat, Butterfly, Crab, Cypher, Shark), alcistas y bajistas.
+- Trazado de los segmentos del patrón y etiqueta en el punto de finalización.
+- Proyección de niveles de Fibonacci (retrocesos y extensiones) del patrón más reciente.
+- Dos métodos de validación seleccionables: por ratios clásicos o por reglas geométricas.
+- Sistema de alertas configurable, con número de repeticiones ajustable.
+- Visualización de la estructura de swings sobre el gráfico.
 
-**Note:** The **Shark** pattern uses **X-A-B-C-D** notation instead of O-X-A-B-C, as used in other implementations.
+## Características técnicas
+
+- **Base de datos:** velas Heiken Ashi (suavizado de precio).
+- **Filtro:** Savitzky-Golay 7/3 para el procesamiento de la señal antes de buscar extremos.
+- **Detección de estructura:** prominencia mínima + distancia mínima entre extremos + alternancia forzada de picos y valles.
+- **Validación:** ratios clásicos o reglas geométricas, según el método seleccionado.
+- **Sistema de identificación:** firma basada en tiempo (datetime) que evita el repintado del patrón detectado.
+- **Alertas:** hasta 5 canales configurables, con control de repeticiones para evitar spam.
+- **Proyección Fibonacci:** hasta 7 niveles, en ambas direcciones (retroceso y extensión).
 
 ---
 
-## Pattern Structure
+## Versiones
 
-### Bullish Pattern (X=Valley):
+### LITE (gratuita)
+- 1 patrón a la vez (bloqueado por sesión).
+- Método clásico (ratios).
+- Alertas básicas (visual + sonido).
+- Ideal para pruebas y aprendizaje.
+
+### PRO (de pago)
+- **6 patrones simultáneamente.**
+- **Motor geométrico** (validación por estructura de precio).
+- **Alertas multicanal** (5 canales: visual, sonido, push, email, log).
+- Análisis multi-timeframe.
+- Historial de patrones detectados.
+- Exportación a CSV.
+- Soporte premium.
+
+---
+
+## Parámetros principales
+
+### Generales
+- Activación de la detección y método de validación.
+- Tolerancia de ratios (0.15 por defecto).
+- Ventana de escaneo (1440 barras).
+
+### Estructura
+- Prominencia mínima (2.0).
+- Separación entre extremos (80 barras).
+- Distancia mínima (40 barras).
+
+### Visualización
+- Mostrar/ocultar porcentajes.
+- Líneas horizontales desde D.
+- Niveles de Fibonacci.
+
+### Alertas
+- Activación.
+- Número de repeticiones (5 por defecto).
+
+## Sistema de alertas (5 canales)
+
+| Canal | Descripción | Configuración |
+|---|---|---|
+| **1. Visual** | Pop-up en el terminal MT5 | `Alert_Visual = true` |
+| **2. Sonido** | Reproducción de archivo WAV | `Alert_Sonido = true` |
+| **3. Push** | Notificación en el móvil | `Alert_Notificacion = true` |
+| **4. Email** | Informe detallado por correo | `Alert_Email = true` |
+| **5. Log** | Registro en la pestaña Expertos | `Alert_Log = true` |
+
+---
+
+## Aviso de responsabilidad
+
+Este indicador se ofrece **exclusivamente con fines informativos y demostrativos**, como herramienta de apoyo al análisis técnico.
+
+No constituye asesoría financiera, de inversión ni recomendación de operación alguna. La detección de patrones es el resultado de un cálculo geométrico y no representa una predicción del comportamiento futuro del mercado.
+
+El rendimiento pasado no garantiza resultados futuros. La operación en mercados financieros conlleva un riesgo elevado de pérdida.
+
+**Usted asume la totalidad del riesgo derivado de cualquier decisión que tome con base en este indicador.** El autor no se hace responsable de pérdidas, daños o perjuicios de ningún tipo resultantes de su uso.
