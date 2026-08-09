@@ -91,13 +91,13 @@ Todos los patrones se identifican sobre una secuencia de cinco puntos de giro, a
 X → A → B → C → D
 V P V P V
 
-text
+
 
 **Patrón bajista** (X = pico):
 X → A → B → C → D
 P V P V P
 
-text
+
 
 Donde **P** = pico y **V** = valle.
 
