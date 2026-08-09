@@ -106,7 +106,7 @@ Lo que ha cambiado en los últimos años es el intento de automatizar esta lectu
 
 ---
 
-## Sistema de alertas (5 canales)
+## Sistema de alertas 
 
 | Canal | Descripción | Configuración |
 |---|---|---|
@@ -115,7 +115,6 @@ Lo que ha cambiado en los últimos años es el intento de automatizar esta lectu
 | **3. Log** | Registro en la pestaña Expertos | `Alert_Log = true` |
 
 ---
-
 
 ## Aviso de responsabilidad
 
@@ -135,7 +134,6 @@ El rendimiento pasado no garantiza resultados futuros. La operación en mercados
 |----------|---------|
 | **Autor** | Nestor Mendez |
 | **Email** | nestor.boza@gmail.com |
-| **GitHub** | https://github.com/newnes |
 
 ---
 
