@@ -174,12 +174,6 @@ En lugar de basarse únicamente en proporciones numéricas, el método geométri
 | Método clásico (ratios) | ✅ | ✅ |
 | **Método geométrico** | ❌ | **✅** |
 | Validación por estructura | ❌ | **✅** |
-| Alertas (canales) | 2 | **5** |
-| Multi-timeframe | ❌ | **✅** |
-| Historial de patrones | ❌ | **✅** |
-| Exportación CSV | ❌ | **✅** |
-| Soporte premium | ❌ | **✅** |
-| Precio | **GRATIS** | **$97** |
 
 ---
 
@@ -192,8 +186,7 @@ En lugar de basarse únicamente en proporciones numéricas, el método geométri
 
 ### Estructura
 - Prominencia mínima (2.0).
-- Separación entre extremos (80 barras).
-- Distancia mínima (40 barras).
+
 
 ### Visualización
 - Mostrar/ocultar porcentajes.
@@ -212,9 +205,7 @@ En lugar de basarse únicamente en proporciones numéricas, el método geométri
 |---|---|---|
 | **1. Visual** | Pop-up en el terminal MT5 | `Alert_Visual = true` |
 | **2. Sonido** | Reproducción de archivo WAV | `Alert_Sonido = true` |
-| **3. Push** | Notificación en el móvil | `Alert_Notificacion = true` |
-| **4. Email** | Informe detallado por correo | `Alert_Email = true` |
-| **5. Log** | Registro en la pestaña Expertos | `Alert_Log = true` |
+| **3. Log** | Registro en la pestaña Expertos | `Alert_Log = true` |
 
 ---
 
@@ -236,7 +227,7 @@ El rendimiento pasado no garantiza resultados futuros. La operación en mercados
 |----------|---------|
 | **Autor** | Nestor Mendez |
 | **Email** | nestor.boza@gmail.com |
-| **GitHub** | https://github.com/newnes |
+
 
 ---
 
