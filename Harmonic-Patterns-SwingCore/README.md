@@ -56,7 +56,7 @@ Aquí no existe una respuesta única y objetiva. La detección de máximos y mí
 - Si el detector es **demasiado sensible**, marca ruido como si fueran giros reales y produce patrones espurios.
 - Si es **demasiado grueso**, pasa por alto estructuras válidas.
 
-La pregunta central —*cuánto suavizado es suficiente y cuánto es demasiado*— no tiene una solución universalmente correcta. Es un problema intrínsecamente subjetivo, y cualquier detector honesto es, en realidad, una toma de posición sobre ese equilibrio.
+La pregunta central —*cuánto suavizado es adecuado y cuánto es excesivo*— no tiene una solución universalmente correcta. Es un problema intrínsecamente subjetivo, y cualquier detector honesto es, en realidad, una toma de posición sobre ese equilibrio.
 
 ---
 
