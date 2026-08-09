@@ -122,17 +122,6 @@ Además del método clásico basado en ratios de Fibonacci, la versión PRO incl
 
 En lugar de basarse únicamente en proporciones numéricas, el método geométrico valida que los puntos X-A-B-C-D cumplan **relaciones de orden estrictas** entre sí. Esto significa que no solo se verifican los ratios, sino también la **estructura espacial** del patrón.
 
-### Comparativa: Clásico vs Geométrico
-
-| Aspecto | Método Clásico | Método Geométrico |
-|---------|---------------|-------------------|
-| **Base** | Ratios Fibonacci | Estructura de precios |
-| **Validación** | Proporciones numéricas | Relaciones de orden |
-| **Tolerancia** | Parámetro ajustable | Condiciones exactas |
-| **Falsos positivos** | Mayor | Menor |
-| **Velocidad** | Más rápido | Similar |
-| **Disponibilidad** | LITE y PRO | **SOLO PRO** |
-
 ---
 
 ## Características
