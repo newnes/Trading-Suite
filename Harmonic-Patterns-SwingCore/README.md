@@ -34,7 +34,7 @@ El indicador dibuja los segmentos del patrón, etiqueta el punto de finalizació
 
 ---
 
-## Qué NO es este indicador
+## Qué "NO" es este indicador
 
 - **No es un sistema de trading automático.** No abre, cierra ni gestiona operaciones.
 - **No genera señales de compra o venta.** Muestra estructuras geométricas; la interpretación y cualquier decisión corresponden por completo al usuario.
