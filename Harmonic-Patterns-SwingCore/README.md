@@ -124,6 +124,7 @@ Lo que ha cambiado en los últimos años es el intento de automatizar esta lectu
 
 ### Estructura
 - Prominencia mínima (2.0).
+- Tolerancia Armónicos ( 0.15).
 
 ### Visualización
 - Mostrar/ocultar porcentajes.
