@@ -63,7 +63,7 @@ Lo que ha cambiado en los últimos años es el intento de automatizar esta lectu
 
 ---
 
-## Versiones: Lite y Pro.
+## Versiones: 
 
 ### LITE (gratuita)
 - 1 patrón a la vez entre Gartley, Bat, Butterfly, Crab, Cypher y Shark.
