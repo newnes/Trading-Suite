@@ -1,4 +1,4 @@
-![Harmonic Patterns SwingCore Pro](Harmonic-Patterns-SwingCore-Pro.png)
+![Harmonic Patterns SwingCore Pro](Images/Harmonic-Patterns-SwingCore-Pro.png)
 
 # Harmonic Patterns SwingCore - For MetaTrader 5 (MT5)
 
@@ -94,10 +94,10 @@ What has changed in recent years is the attempt to automate this reading on low 
 | **Availability** | LITE and PRO | **PRO ONLY** |
 
 ---
-![Harmonic Patterns SwingCore Pro](Classic.png)
+![Harmonic Patterns SwingCore Pro](Images/Classic.png)
 ## CLASSIC
 ---
-![Harmonic Patterns SwingCore Pro](Geometric.png)
+![Harmonic Patterns SwingCore Pro](Images/Geometric.png)
 ## GEOMETRIC
 ---
 
