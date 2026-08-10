@@ -196,5 +196,16 @@ Past performance does not guarantee future results. Trading in financial markets
 | **Email** | nestor.boza@gmail.com |
 
 ---
+test on EURUSD,H1 (netting)
+ expert file MQL5\Examples\Heiken_Ashi.ex5 open error [3]
+ expert file MQL5\Indicators\Examples\Heiken_Ashi.ex5 open error [2]
+ program file Examples\Heiken_Ashi.ex5 read error
+ program file Indicators\Examples\Heiken_Ashi.ex5 read error
+ loading of Heiken_Ashi EURUSD,H1 failed [557]
+ 2024.05.01 00:00:00   cannot load custom indicator 'Examples\Heiken_Ashi.ex5' (EURUSD) [4802]
+ 2024.05.01 00:00:00   indicator create error in 'Harmonic_Patters_SwingCore_Pro.mq5' (1,1)
+ test189842 (EURUSD,H1) OnInit return code is -1
+ cannot initialize indicator
+ disconnected
 
 *Version: 1.0 | Last Updated: August 2026 | Copyright © 2026, Nestor Mendez*
