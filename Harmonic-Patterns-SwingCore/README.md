@@ -158,9 +158,11 @@ What has changed in recent years is the attempt to automate this reading on low 
 
 For detailed instructions on how to install and use Harmonic Patterns SwingCore, please download the complete user manual:
 
-📥 **[Download Manual_SwingCore_EN.pdf](Manuals/Manual_SwingCore_EN.pdf)**
-📥 **[Download Manual_SwingCore_EN.pdf](Manuals/Manual_SwingCore_ES.pdf)**
-📥 **[Download Manual_SwingCore_EN.pdf](Manuals/Manual_SwingCore_RU.pdf)**
+| Language | Download |
+|----------|----------|
+| 🇬🇧 English | [Manual_SwingCore_EN.pdf](Manuals/Manual_SwingCore_EN.pdf) |
+| 🇪🇸 Español | [Manual_SwingCore_ES.pdf](Manuals/Manual_SwingCore_ES.pdf) |
+| 🇷🇺 Русский | [Manual_SwingCore_RU.pdf](Manuals/Manual_SwingCore_RU.pdf) |
 
 
 
