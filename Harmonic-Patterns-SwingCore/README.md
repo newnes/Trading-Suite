@@ -4,6 +4,16 @@
 
 Technical analysis indicator for detecting and visualizing harmonic patterns on the chart timeframe M1, with Fibonacci level projection and configurable alert system.
 
+
+---
+
+## 📥 **Quick Access - User Manuals**
+
+| Language | Download |
+|----------|----------|
+| 🇬🇧 English | [Manual_SwingCore_EN.pdf](Manuals/Manual_SwingCore_EN.pdf) |
+| 🇪🇸 Español | [Manual_SwingCore_ES.pdf](Manuals/Manual_SwingCore_ES.pdf) |
+| 🇷🇺 Русский | [Manual_SwingCore_RU.pdf](Manuals/Manual_SwingCore_RU.pdf) |
 ---
 
 ## What This Indicator Is
